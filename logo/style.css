@@ -1,0 +1,96 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0; /* Ensure the header stays at the top */
+    left: 0; /* Align the header from the left */
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: block; /* Make logo a block element to respect width and height */
+    max-width: 100%; /* Ensure the logo is responsive and doesn't overflow */
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and nav items */
+    align-items: center; /* Align items vertically */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex; /* Display list items inline */
+    align-items: center; /* Align items vertically */
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Increase spacing between nav items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ff6600;
+}
+
+.main-content {
+    padding-top: 80px; /* Adjust top padding instead of margin to avoid collapsing margins */
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 120px; /* Adjust logo size on smaller screens */
+    }
+
+    .main-content {
+        padding-top: 60px; /* Adjust top padding for smaller header */
+    }
+}
